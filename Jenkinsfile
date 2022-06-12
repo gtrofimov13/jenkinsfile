@@ -12,7 +12,7 @@ pipeline {
                     ls -la
                     docker --version
                     docker ps
-                    docker image ls -la
+                    docker image ls
                     docker container ls -a
                 '''
             }
