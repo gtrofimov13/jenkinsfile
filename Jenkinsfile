@@ -7,6 +7,8 @@ pipeline {
                 cleanWs()
                 sh '''
                     echo "Hello World!"
+                    echo $PWD
+                    ls -la
                     docker --version
                 '''
             }
@@ -15,8 +17,6 @@ pipeline {
             steps {
                 sh'''
                     echo "Build"
-                    ls -la
-                    docker run --rm hello-world
                     docker build -t ngnix-hello-world .
                     docker run -d -p 80:80 ngnix-hello-world
                 '''
