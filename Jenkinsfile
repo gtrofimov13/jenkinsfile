@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh'''
                     echo "Build"
-                    docker ps
+                    docker run --rm hello-world
                 '''
             }
         }
