@@ -38,6 +38,7 @@ pipeline {
                   echo "Deploying"
                   docker stop ngnix-hello-world
                   docker -rf ngnix-hello-world:latest
+                  docker -rf ngnix-hello-world
                   docker build -t ngnix-hello-world .
                   docker run -d -p 80:80 ngnix-hello-world
                 '''
