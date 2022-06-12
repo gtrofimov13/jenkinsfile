@@ -36,7 +36,7 @@ pipeline {
             steps {
                sh'''
                   echo "Deploying"
-                  docker-compose restart
+                  docker-compose up -d
                 '''
             }
         }
