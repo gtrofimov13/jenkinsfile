@@ -16,6 +16,8 @@ pipeline {
                 sh'''
                     echo "Build"
                     docker run --rm hello-world
+                    docker build -t ngnix-hello-world
+                    docker run -d -p 80:80 ngnix-hello-world 
                 '''
             }
         }
