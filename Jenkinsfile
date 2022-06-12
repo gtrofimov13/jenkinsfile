@@ -11,6 +11,9 @@ pipeline {
                     echo $PWD
                     ls -la
                     docker --version
+                    docker ps
+                    docker image ls -la
+                    docker container ls -a
                 '''
             }
         }
@@ -18,8 +21,7 @@ pipeline {
             steps {
                 sh'''
                     echo "Build"
-                    docker build -t ngnix-hello-world .
-                    docker run -d -p 80:80 ngnix-hello-world
+
                 '''
             }
         }
@@ -34,6 +36,10 @@ pipeline {
             steps {
                sh'''
                   echo "Deploying"
+                  docker stop ngnix-hello-world
+                  docker -rf ngnix-hello-world:latest
+                  docker build -t ngnix-hello-world .
+                  docker run -d -p 80:80 ngnix-hello-world
                 '''
             }
         }
