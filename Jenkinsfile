@@ -7,6 +7,7 @@ pipeline {
                 cleanWs()
                 sh '''
                     echo "Hello World!"
+                    docker --version
                 '''
             }
         }
@@ -14,6 +15,7 @@ pipeline {
             steps {
                 sh'''
                     echo "Build"
+                    docker run --rm hello-world
                 '''
             }
         }
