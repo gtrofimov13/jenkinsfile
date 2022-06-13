@@ -7,3 +7,9 @@ services:
             - 8090:80
         volumes:
             - ./src:/usr/share/nginx/html
+        networks:
+            - ngnix
+    networks:
+        ngnix:
+            external: true
+            name: ngnix
