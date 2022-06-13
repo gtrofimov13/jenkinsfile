@@ -10,6 +10,6 @@ services:
       networks:
         - nginx
     networks:
-      ngnix:
+      nginx:
         external: true
-        name: ngnix
+        name: nginx
