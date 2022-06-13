@@ -1,15 +1,15 @@
 version: "3"
 services:
-    static-homepage:
-        image: nginx
-        container_name: static-homepage
-        ports:
-            - 8090:80
-        volumes:
-            - ./src:/usr/share/nginx/html
-        networks:
-            - ngnix
+  static-homepage:
+    image: nginx
+      container_name: static-homepage
+      ports:
+        - 8090:80
+      volumes:
+        - ./src:/usr/share/nginx/html
+      networks:
+        - nginx
     networks:
-        ngnix:
-            external: true
-            name: ngnix
+      ngnix:
+        external: true
+        name: ngnix
