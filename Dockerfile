@@ -1,5 +1,5 @@
 # nginx state for serving content
-FROM nginx:alpine
+FROM nginx
 # Set working directory to nginx asset directory
 WORKDIR .
 # Remove default nginx static assets
