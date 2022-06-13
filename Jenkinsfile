@@ -36,7 +36,7 @@ pipeline {
             steps {
                sh'''
                   echo "Deploying"
-                  docker-cmopose down
+                  docker-compose down
                   docker-compose up -d
                 '''
             }
