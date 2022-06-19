@@ -1,12 +1,14 @@
 version: "3"
 services:
     static-homepage:
-        build: .
+        image: nginx:alpine
         container_name: static-homepage
         ports:
             - 8090:80
         networks:
             - nginx
+        volumes:
+            - ./src:/usr/share/nginx/html
 networks:
     nginx:
         external: true
