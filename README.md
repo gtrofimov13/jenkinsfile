@@ -6,7 +6,7 @@
 
 ```
  src/
-  |-- index.html
+  +-- index.html
  Jenkinsfile
  docker-compose.yaml
 ```
