@@ -4,8 +4,9 @@
 
  runs dockr conatiner with ngnix
 
-
+```
  src/
   |-- index.html
  Jenkinsfile
  docker-compose.yaml
+```
